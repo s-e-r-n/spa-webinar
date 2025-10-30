@@ -1,3 +1,3 @@
 export default function Page() {
-  return <main>200 OK</main>;
+  return <main>confirmé</main>;
 }
