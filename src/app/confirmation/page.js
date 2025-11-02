@@ -50,15 +50,18 @@ export default function Page() {
     send();
   }, []);
   return (
-    <main className="min-h-screen h-auto">
+    <main className="min-h-screen h-auto px-4">
       <section className="min-h-screen h-auto flex flex-col items-center justify-center">
         <header className="w-full h-full text-center py-12">
           <h2 className="italic">Félicitations pour votre engagement 🔥</h2>
 
           <div className="flex flex-col items-center w-full">
-            <h1 className="text-gray-800 text-6xl font-bold leading-tight text-center">
+            <h1 className="text-gray-800 text-3xl md:text-4xl font-bold text-center mt-4">
               Vous avez presque terminé...
               <br />
+            </h1>
+
+            <h1 className="text-6xl font-bold my-4">
               <span className="text-[#6F00FF]">
                 Encore 3 étapes{" "}
                 <span className="italic">simples & rapides</span>
