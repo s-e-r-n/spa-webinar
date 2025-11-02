@@ -59,7 +59,7 @@ export function mapToMetaPayload(cleanPayload, headersData = {}, options = {}) {
 
   const metaPayload = {
     data: [metaPayloadData],
-    test_event_code: "TEST40960",
+    //test_event_code: "TEST40960",
   };
 
   return metaPayload;

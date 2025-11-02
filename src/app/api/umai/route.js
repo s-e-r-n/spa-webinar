@@ -1,12 +1,10 @@
-// app/api/meta/route.js (exemple)
-
 import { NextResponse } from "next/server";
 import { mapToMetaPayload } from "@/lib/META/meta.payload";
 
 export async function POST(request) {
   const ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
   const PIXEL_ID = process.env.META_PIXEL_ID;
-  const TEST_CODE = "TEST40960";
+  //const TEST_CODE = "TEST40960";
   if (!ACCESS_TOKEN || !PIXEL_ID) {
     return NextResponse.json({ error: "Missing META config" }, { status: 500 });
   }
@@ -27,7 +25,7 @@ export async function POST(request) {
   const metaPayload = mapToMetaPayload({ ...data, eventName }, headersData, {
     eventName,
     customData: {},
-    testEventCode: TEST_CODE,
+    // testEventCode: TEST_CODE,
   });
 
   console.log("[META PAYLOAD]:\n", JSON.stringify(metaPayload, null, 2));

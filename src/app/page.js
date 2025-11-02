@@ -1,12 +1,44 @@
 "use client";
 
+import { useEffect } from "react";
 import WebinarJamRegistrationBar from "@/components/WbinarJamRegistrationBar";
 import WebinarJamForm from "@/components/WebinarJamForm";
-import ReviewCardMd from "@/components/ReviewCardMd";
-import { useEffect } from "react";
 import ReviewsSection from "@/components/ReviewsSection";
 
 export default function Page() {
+  useEffect(() => {
+    const key = "meta:vc:sent";
+    if (sessionStorage.getItem(key)) return;
+
+    const url = new URL(window.location.href);
+    const p = url.searchParams;
+
+    const payload = {
+      eventName: "ViewContent",
+      event_source_url: url.toString(),
+      fbp: document.cookie.match(/(?:^|;\s*)_fbp=([^;]+)/)?.[1],
+      fbc: document.cookie.match(/(?:^|;\s*)_fbc=([^;]+)/)?.[1],
+      fbclid: p.get("fbclid") || undefined,
+    };
+
+    const send = async (attempt = 0) => {
+      try {
+        const r = await fetch("/api/umai", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+          keepalive: true,
+        });
+        if (!r.ok) throw new Error("bad_status_" + r.status);
+        sessionStorage.setItem(key, "1");
+      } catch (e) {
+        if (attempt >= 25) return;
+        setTimeout(() => send(attempt + 1), attempt === 0 ? 1000 : 3000);
+      }
+    };
+
+    send();
+  }, []);
   return (
     <main className="min-h-screen h-auto mb-[200px]">
       <div className="fixed inset-x-0 top-0 z-50 bg-[#6f00ff] px-2 ">
