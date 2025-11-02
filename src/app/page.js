@@ -63,7 +63,7 @@ export default function Page() {
 
       <section className="min-h-screen h-auto flex flex-col items-center justify-center mt-8">
         <header className="bg-neutral-100 w-full h-full text-center py-12">
-          <h2 className="italic text-sm lg:text-lg leading-1 py-2">
+          <h2 className="italic text-sm lg:text-lg py-2">
             <img src="/ch.svg" className="w-6 h-6 inline mb-0.5  mr-2" />
             Coach, Thérapeutes, Professionnels de l'Accompagnement, Acteurs de
             la Santé en Suisse Romande...
