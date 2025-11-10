@@ -49,6 +49,7 @@ export default function Page() {
 
     send();
   }, []);
+
   return (
     <main className="min-h-screen h-auto px-4">
       <section className="min-h-screen h-auto flex flex-col items-center justify-center">
@@ -57,13 +58,13 @@ export default function Page() {
 
           <div className="flex flex-col items-center w-full">
             <h1 className="text-gray-800 text-3xl md:text-4xl font-bold text-center mt-4">
-              Vous avez presque terminé...
+              Vous êtes presque inscrits...
               <br />
             </h1>
 
             <h1 className="text-6xl font-bold my-4">
               <span className="text-[#6F00FF]">
-                Encore 3 étapes{" "}
+                Encore 4 étapes{" "}
                 <span className="italic">simples & rapides</span>
               </span>
             </h1>
@@ -81,6 +82,19 @@ export default function Page() {
                 <span className="font-medium text-2xl text-bold">
                   ÉTAPE 2 :
                 </span>{" "}
+                Rejoignez{" "}
+                <span className="text-[#6F00FF] underline">
+                  notre groupe TRTD privé
+                </span>{" "}
+                pour ne pas rater d'informations captiales{" "}
+                <span className="italic">
+                  (lien dans le mail de confirmation)
+                </span>
+              </li>
+              <li className="text-md md:text-lg text-black">
+                <span className="font-medium text-2xl text-bold">
+                  ÉTAPE 3 :
+                </span>{" "}
                 Ajouter la date à{" "}
                 <span className="text-[#6F00FF] underline">
                   {" "}
@@ -90,7 +104,7 @@ export default function Page() {
               </li>
               <li className="text-md md:text-lg text-black">
                 <span className="font-medium text-2xl text-bold">
-                  ÉTAPE 3 :
+                  ÉTAPE 4 :
                 </span>{" "}
                 <span className="text-[#6F00FF] underline"> Regardez</span>{" "}
                 cette vidéo de 60 secondes pour confirmer votre participation ↴

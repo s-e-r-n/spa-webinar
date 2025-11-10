@@ -2,6 +2,21 @@ import ReviewCardMd from "./ReviewCardMd";
 
 const REVIEWS = [
   {
+    name: "Issao",
+    photo: "/avis/issao.png",
+    rating: "5.0",
+    review: `Ma formation avec Yannick et Angelly m’a apporté plein d’outils que j’utilise au quotidien et dont j’ai pu me servir dès le lendemain.
+
+Ils combinent des apports théoriques très riches et de super exercices pratiques qui permettent d’intégrer les concepts en profondeur et de pleinement les assimiler.
+
+Ils prêtent attention à tous les participants pour s’assurer que chacun reparte avec quelque chose d’adapté à ses besoins.
+
+Et bien sûr, tous ceux qui les connaissent le savent, ce sont de magnifiques personnes au grand cœur avec une énergie incroyable.
+
+Allez-y les yeux fermés si vous voulez des formations de top qualité dans le plaisir et la bonne humeur !
+`,
+  },
+  {
     name: "Céline",
     photo: "/avis/celine.png",
     rating: "5.0",
